@@ -1,0 +1,33 @@
+/* Importações */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* Parâmetros globais */
+:root {
+  --font-one: "Roboto", sans-serif;
+
+  --main-one: #8db986;
+  --main-two: #acce91;
+  --main-three: #badb73;
+  --main-four: #efeae4;
+  --light-one: #fff;
+  --light-two: #ebebeb;
+  --dark-one: #232323;
+  --dark-two: #525252;
+  --dark-three: #828282;
+  --red-one: #e30000;
+}
+
+* {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: var(--font-one);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::selection {
+  color: #a6a6a6;
+  background: #dbdbdb;
+}

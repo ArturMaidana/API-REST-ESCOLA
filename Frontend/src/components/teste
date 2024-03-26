@@ -1,0 +1,76 @@
+import React, { useEffect, useState } from "react";
+import ApexCharts from "apexcharts";
+import { getAllAlunos, getAllTurmas } from "../services/alunos";
+
+function LineChart() {
+  useEffect(() => {
+    renderLineChart();
+  }, []);
+
+  function renderLineChart() {
+    new ApexCharts(document.querySelector("#line-adwords"), {
+      // Configurações do gráfico de linha...
+      
+
+    }).render();
+  }
+
+  return <div id="line-adwords"></div>;
+}
+
+function RadialChart() {
+  useEffect(() => {
+    renderRadialChart();
+  }, []);
+
+  function renderRadialChart() {
+    new ApexCharts(document.querySelector("#radialBarBottom"), {
+      // Configurações do gráfico radial...
+    }).render();
+  }
+
+  return <div id="radialBarBottom"></div>;
+}
+
+function BarChart() {
+  useEffect(() => {
+    renderBarChart();
+  }, []);
+
+  function renderBarChart() {
+    new ApexCharts(document.querySelector("#barchart"), {
+      // Configurações do gráfico de barras...
+    }).render();
+  }
+
+  return <div id="barchart"></div>;
+}
+
+function AreaChart() {
+  useEffect(() => {
+    renderAreaChart();
+  }, []);
+
+  function renderAreaChart() {
+    new ApexCharts(document.querySelector("#areachart"), {
+      // Configurações do gráfico de área...
+    }).render();
+  }
+
+  return <div id="areachart"></div>;
+}
+
+export function Graficos() {
+  // State e funções de busca e renderização...
+
+  return (
+    <div>
+      {/* Renderização de outros componentes... */}
+      
+      <LineChart />
+      <BarChart />
+      <AreaChart />
+      <RadialChart />
+    </div>
+  );
+}
